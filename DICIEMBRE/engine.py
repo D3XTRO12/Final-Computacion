@@ -12,8 +12,14 @@ class Engine:
         self._bomboNumbers = cart
 
     def show_carton(self):
-        carton = self.__origin if origin == True else self.__origin
+        carton=self._origin if origin else self._carton
         for i in range (0, len[carton], 4):
             print(carton[i:i+4])
+    def get_bombo_number(self):
+        numeroPos=random.choice(cart()-1)
+        pick = self._bomboNumbers[numeroPos]
+        del self._bomboNumbers[numeroPos]
+        self._pickedNumber.append(pick)
+        return pick
 
 Engine().show_carton
